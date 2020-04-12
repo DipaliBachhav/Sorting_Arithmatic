@@ -18,3 +18,13 @@ echo "$result3"
 
 result4=$(( $a%$b+$c ))
 echo "$result4"
+
+#created Dictionary
+declare -A dictionary
+dictionary[1]=$result1
+dictionary[2]=$result2
+dictionary[3]=$result3
+dictionary[4]=$result4
+
+#Store Result In Dictionary
+echo "${dictionary[@]}"
