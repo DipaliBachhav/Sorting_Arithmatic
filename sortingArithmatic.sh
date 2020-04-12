@@ -9,3 +9,7 @@ read -p "Enter The Value Of c := " c
 #Computation Of Expression
 result1=$(( $a+$b*$c ))
 echo "$result1"
+
+result2=$(( $a*$b+$c ))
+echo "$result2"
+
