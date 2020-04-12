@@ -27,4 +27,14 @@ dictionary[3]=$result3
 dictionary[4]=$result4
 
 #Store Result In Dictionary
+echo "${!dictionary[@]}"
 echo "${dictionary[@]}"
+#Created Array And Store Dictionary Value In Array
+declare -A array
+key=1
+for key in ${!dictionary[@]};
+do
+	array[$key]=${dictionary[$key]}
+done
+echo "${array[@]}"
+
