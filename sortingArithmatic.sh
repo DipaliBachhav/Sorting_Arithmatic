@@ -6,3 +6,6 @@ read -p "Enter The value Of a := " a
 read -p "Enter The Value Of b := " b
 read -p "Enter The Value Of c := " c
 
+#Computation Of Expression
+result1=$(( $a+$b*$c ))
+echo "$result1"
