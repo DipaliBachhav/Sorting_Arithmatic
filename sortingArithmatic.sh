@@ -43,12 +43,27 @@ for(( i=1; i<=4; i++ ))
 do
 	for(( j=$((i+1)); j<=4; j++ ))
 	do
-	if [[ ${array[$i]} -lt ${array[$i]} ]]
+	if [[ ${array[$i]} -lt ${array[$j]} ]]
 	then
 		temp=${array[$i]}
 		array[$i]=${array[$j]}
 		array[$j]=$temp
 	fi
 	done
+done
+echo "${array[@]}"
+
+#Store Array In Ascending Order
+for(( i=1; i<=4; i++ ))
+do
+        for(( j=$((i+1)); j<=4; j++ ))
+        do
+        if [[ ${array[$i]} -gt ${array[$j]} ]]
+        then
+                temp=${array[$j]}
+                array[$j]=${array[$i]}
+                array[$i]=$temp
+        fi
+        done
 done
 echo "${array[@]}"
